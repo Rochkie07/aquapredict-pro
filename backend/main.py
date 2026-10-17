@@ -18,9 +18,11 @@ app = FastAPI(title="AquaPredict Pro API")
 # CORS: lets the dashboard (port 3000) call this API (port 8000).
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+       allow_origins=[
+       "http://localhost:3000",
+       "http://127.0.0.1:3000",
+       "https://aquapredict-pro.vercel.app",
+   ],
 )
 
 # ---- Cache: remember the last slow download for 6 hours ----
