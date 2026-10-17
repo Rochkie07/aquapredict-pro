@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { Compass, Send, Users, Waves } from "lucide-react"; // small icons
 
 // Where the backend lives. ONE place to change when you deploy online.
-const API_URL = "http://localhost:8000";
+   const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 // ---- TYPES: the shape of our data. Catches typos before you run the page.
 type Zone = {
